@@ -18,8 +18,6 @@ class NaiveBayes(object):
                 vocab[label] = vocab.get(label, {})
                 vocab[label][key] = vocab[label].get(key, 0) + 1
 
-        pc = {}
-
         sumc = sum(pc.values())
         for key in pc:
             pc[key] = math.log(pc[key] / sumc)
